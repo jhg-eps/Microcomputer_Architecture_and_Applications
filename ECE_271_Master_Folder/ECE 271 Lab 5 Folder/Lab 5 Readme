@@ -1,0 +1,39 @@
+Joseph Garcia
+Readme and Project Report
+
+In this laboratory, I used two arrays to activate the four solenoids which made the stepper motor turn: one for fullstepping, and one 
+for halfstepping. Each array was made of 4 bit commands which were loaded into the GPIO ODR register and bit shifted to the four 
+corresponding pins (PB12, PB13, PB14, PB15) to activate or deactivate them. The 4 bit numbers (e.g 1010, 1001, etc. corresponded to the 
+diagram on pages 194 and 195. My something cool was to have the motor run in reverse by having the order of the halfstepping array reversed.
+
+Project Report:
+
+1. How can you change the rotation speed? 
+-I can change the rotation speed of my motor by changing the time delays on the pin activations. The shorter the time the pins are activated
+(while still alowing the spokes to fully reach each coil in the ticks they make), the more quick each little tick of the motor will go. As a 
+whole then, the motor will turn more quickly. In order to slow the motor down, increasing the time delays would work because the individual
+spokes on the rotating wheel will still have time to reach the coils on each electric pulse, and they will spend a lot of down time at each coil,
+just sitting there being pulled non-radially by the coils (which wastes energy).
+
+2. What is the highest update frequency of the full-stepping control signals while the motor 
+does not drop any steps? Use an oscilloscope to find out your update frequency. 
+-For the fullstepping, the highest update frequency was about 313 Hz. This corresponded to a time delay of 2000, where each command in the
+delay for loop was around 0.1 nanoseconds. For anything higher, the motor will not rotate all the way. It will just twitch. For very low fre
+quencies, the motor will become very rough and jerky, staying longer at each position.
+
+3. What is the highest update frequency of the half-stepping control signals while the motor 
+does not drop any steps? Use an oscilloscope to find out your update frequency. 
+-The highest update frequency for half-stepping was 616 Hz. The motor ran very smoothly at frequencies lower than this, but 
+at frequencies higher, the motor just twitched.
+
+4. Is the highest update frequency of the half-stepping higher than full-stepping? Why? 
+-The highest update frequency of the half-stepping was twice that of the fullstepping. This is because for halfstepping, there were two 
+coil activation commands for every one that the full-stepping had. It is important to note that if we use the same time delays for half-
+stepping and full stepping, say 2000, the half-stepping routine will cause shorter revolving ticks than the full-stepping will, while being 
+given the same amount of time that the full-stepping routine was. The shorter the delay, the less "down time" for the motor. Therefore, it will
+spend much more of its time moving than the full-stepping motor would, so it will go more smoothly. There is not so much down time.
+
+5. What would happen if the update frequency is higher than the maximum allowed?
+-If the update frequency was higher than the max allowed, the motor would be getting so many signals per time unit, that when it gets one command 
+and activates one pair of coils (or single coil), by the time it makes a particular spoke on the wheel up and running, there may be a 
+signal at the coil closest to the spoke which causes it to get pulled back to where it was before. The motor becomes a buzzing mess.

@@ -1,0 +1,6 @@
+Lab 10 README
+
+In this laboratory procedure, I used the TIM4 IRQ Handler in conjunction with the sine function to do DAC (in the form of creating a 
+440Hz sine wave). The sine function was used to determine the quadrant and sign of a particular angle (held in R1). From there, the 
+voltage variable (held in R0) was subtracted from the maximum of the DOR register (4096) in order to create an instantaneous voltage
+value between 0V and 3.3V which were output to the two DAC converters simultaneously.

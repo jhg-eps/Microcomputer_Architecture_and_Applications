@@ -1,0 +1,7 @@
+Joseph Garcia Project Report and README
+
+In this lab, I used the SysTick Timer and the SysTick_Handler in combination to cause the Blue and Green LEDs to blink on the board. 
+While the SysTick Timer was counting down freely, decrementing the time delay constant by one millisecond each time that it (SysTick timer) 
+reached zero in the SysTick Handler, there was a busy loop (in the delay_function function) comparing the time delay constant to zero. Once the
+SysTick Handler had decremented the time delay variable 1000 times (and this took 1000 ms = 1 second), the busy loop could quit and the 
+lights could be toggled the opposite way for another 1000 ms. Thus we get our blinking.

@@ -1,0 +1,4 @@
+README
+
+In this laboratory procedure, I used ADC to determine the voltage of an incoming analog signal. The incoming analog signal varied between V = 0 and Vcc, and it was controlled by a potentiometer subject to the manipulations of an outside user. If the incoming voltage was below Vcc/2, 
+the Blue LED would not light. If the signal was above Vcc/2, the blue LED would light up.

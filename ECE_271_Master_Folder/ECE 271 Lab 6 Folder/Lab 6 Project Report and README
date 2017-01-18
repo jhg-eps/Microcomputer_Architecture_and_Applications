@@ -1,0 +1,28 @@
+Readme and Post-Lab Report
+Joseph Garcia
+
+README TEXT
+Joseph Garcia
+
+In this lab, I used Pulse Width Modulation to dim and brighten the Blue (PB6) and Green (PB7) LEDs in an
+infinite loop. My cool thing was to have the lights dimming and brightening 180 degrees out of phase, so 
+as the light fled from 1, it could flow into the other. This could have been achieved by using a for loop in 
+which both lights were using PWM 1 but the directions of the two LEDs were opposite so that one was 
+counting up and the other down, but the most simple way to do this is to just have one of the LEDs use
+PWM Mode 2 for the same effect.
+
+PWM Report:
+
+TIM4_ARR: 240
+TIM4_PSC: 1
+
+			TIM4_CCR1		Pulse Width				Pulse Period
+Case 1:		40				191.4 microseconds  	229.5 microseconds
+Case 2:		80				153.4 microseconds		229.5 microseconds
+Case 3:		120				115.2 microseconds		229.5 microseconds
+
+Question 1:   The relationship: (system clock/(prescaler)aka PSC)= CK_CNT = (1/Pulse Period)
+
+Case 1 Duty: 83.4%
+Case 2 Duty: 66.8%
+Case 3 Duty: 50.22%

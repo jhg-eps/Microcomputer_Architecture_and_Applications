@@ -1,0 +1,8 @@
+README
+Joseph Garcia
+4/13/14
+
+In this lab, I used interrupts to toggle the Blue LED (PB6). The application works this way: by pressing the User Button
+(which is mapped to PA0), the EXTI0_IRQHandler is called by the EXTI0 Interrupt. If the EXTI->PR bit is 1, then we have the "selected 
+trigger request occurred" so we go into the light toggling routine. With the EOR command, we are able to turn the light off if it was on,
+and we can turn it off if it was on already. 

@@ -1,0 +1,32 @@
+
+Joseph Garcia
+ECE 271
+Text Revision Advised Corrections
+
+1. Pg 238, 16.1, third paragraph: Should be "For example, a stereo audio player needs the outputs of the left and right channels to be synchronized in order to avoid annoying double talk."
+
+2. Pg 239, 16.2, paragraph 4: Should be "The DAC conversion can be triggered by software triggers, external timers, and internal timers." The end of the paragraph would sound better as "to generate a corresponding output voltage."
+
+3.  Pg 240, 16.3, first paragraph: Should be "A voltage output buffer is used to transfer a circuit..."
+
+4. Pg 240, 16.4, second paragraph: Should be "For example, a stereo audio player needs the outputs of the left and right channels to be synchronized in order to avoid annoying double talk."
+
+5. Pg 240, 16.5, final paragraph: Should read "Many microcontrollers do not have a floating-point unit (FPU)..."
+
+6. Pg 241, 16.5, text just above Figure 16-5: Should read "We will use a lookup table to find the value of sin(x)."
+
+7. Pg 245, 16.6, second to last paragraph, first line: "When the DAC The angle of the sine function should increase from 0 to 360 to complete one cycle in the sinusoidal waveform." I interpret this as "While the DAC is being performed, the angle of the sine function should increase from 0 degrees to 360 degrees in order to complete one cycle of the sinusoidal waveform." 
+
+8. Pg 245, 16.6, second to last paragraph, last line: Should be "In order to achieve that, how many degrees should the angle variable be increased in the TIM4_IRQHandler each time?"
+
+9. Pg 245, 16.6, final line: Should be "If the degree to be increased is not an integer, what can you do to get around this issue?"
+
+10. Pg 249, 16.7.2 "Musical Duration": In the second-to-last line, the phrase "dram machine" is written instead of "drum machine."
+
+11. Pg 250, 16.7.3 "Amplitude Modulation of Tones": The second line on the page might sound better as "While the duration of the release phase is typically short, it can last relatively long, such as eight seconds for a foghorn, and two seconds for bells."
+
+12. Pg 250, 16.7.3 "Amplitude Modulation of Tones", final paragraph: Should be "Assume BPM is 60."
+
+13. Pg 252, 16.7.3 "Amplitude Modulation of Tones", first paragraph: The second-to-last line might sound better like this: "According to the Nyquist-Shannon Sampling Theorem, the sampling frequency must be at least twice the maximum signal frequency that is audible to human ears."
+
+					

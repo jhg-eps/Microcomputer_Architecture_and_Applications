@@ -1,0 +1,8 @@
+Lab 11 README
+Joseph Garcia 
+
+In this lab procedure, I used the SysTick and TIM4 timers to play music. Using 60 BPM as a reference, my SysTick delay was set to generate an
+interrupt every 1 millisecond. Using particular note frequencies (array index values) and their associated beat counts as I stepped through 
+the note and beat count arrays, I made sure that the SysTick interrupt made each note last the proper amount of time and that the TIM4 IRQ 
+Handler was generating the proper frequency of wave (based on what index I was on in the note array). My something cool was to write and play 
+the Excitebike theme (intro) song.
